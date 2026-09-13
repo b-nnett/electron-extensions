@@ -1,0 +1,806 @@
+[
+  {
+    "slug": "slack",
+    "name": "Slack",
+    "bundlePath": "/Applications/Slack.app",
+    "bundleIdentifier": "com.tinyspeck.slackmacgap",
+    "executable": "/Applications/Slack.app/Contents/MacOS/Slack",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://app\\.slack\\.com/[^?#\\r\\n]*$",
+      "selector": "a.p-ssb_landing__button"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "vscode",
+    "name": "Visual Studio Code",
+    "bundlePath": "/Applications/Visual Studio Code.app",
+    "bundleIdentifier": "com.microsoft.VSCode",
+    "executable": "/Applications/Visual Studio Code.app/Contents/MacOS/Code",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^vscode\\-file:[^?#\\r\\n]+$",
+      "selector": ".monaco-workbench [role=\"button\"][aria-label=\"Manage\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "bundlePath": "/Applications/Notion.app",
+    "bundleIdentifier": "notion.id",
+    "executable": "/Applications/Notion.app/Contents/MacOS/Notion",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://app\\.notion\\.com/[^?#\\r\\n]*$",
+      "selector": "div[role=button].x1b7c0jy"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "signal",
+    "name": "Signal",
+    "bundlePath": "/Applications/Signal.app",
+    "bundleIdentifier": "org.whispersystems.signal-desktop",
+    "executable": "/Applications/Signal.app/Contents/MacOS/Signal",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Signal\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "a"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "postman",
+    "name": "Postman",
+    "bundlePath": "/Applications/Postman.app",
+    "bundleIdentifier": "com.postmanlabs.mac",
+    "executable": "/Applications/Postman.app/Contents/MacOS/Postman",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Postman\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button[data-testid=\"aether-modal-close-button\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "obsidian",
+    "name": "Obsidian",
+    "bundlePath": "/Applications/Obsidian.app",
+    "bundleIdentifier": "md.obsidian",
+    "executable": "/Applications/Obsidian.app/Contents/MacOS/Obsidian",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^app:[^?#\\r\\n]+$",
+      "selector": ".quick-start-container > button.mod-cta"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "github",
+    "name": "GitHub Desktop",
+    "bundlePath": "/Applications/GitHub Desktop.app",
+    "bundleIdentifier": "com.github.GitHubClient",
+    "executable": "/Applications/GitHub Desktop.app/Contents/MacOS/GitHub Desktop",
+    "transport": "tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/GitHub%20Desktop\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button[type=submit]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "discord",
+    "name": "Discord",
+    "bundlePath": "/Applications/Discord.app",
+    "bundleIdentifier": "com.hnc.Discord",
+    "executable": "/Applications/Discord.app/Contents/MacOS/Discord",
+    "transport": "launchservices-tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://discord\\.com/channels/[^?#\\r\\n]+$",
+      "selector": "button.fullWidth_a22cb0"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "bundlePath": "/Applications/Figma.app",
+    "bundleIdentifier": "com.figma.Desktop",
+    "executable": "/Applications/Figma.app/Contents/MacOS/Figma",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://www\\.figma\\.com/[^?#\\r\\n]*$",
+      "selector": "button[type=\"submit\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "tabby",
+    "name": "Tabby",
+    "bundlePath": "/Applications/Tabby.app",
+    "bundleIdentifier": "org.tabby",
+    "executable": "/Applications/Tabby.app/Contents/MacOS/Tabby",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Tabby\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.btn-primary"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "bundlePath": "/Applications/Cursor.app",
+    "bundleIdentifier": "com.todesktop.230313mzl4w4u92",
+    "executable": "/Applications/Cursor.app/Contents/MacOS/Cursor",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^vscode\\-file:[^?#\\r\\n]+$",
+      "selector": "button.glass-2p8vrm"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "bruno",
+    "name": "Bruno",
+    "bundlePath": "/Applications/Bruno.app",
+    "bundleIdentifier": "com.usebruno.app",
+    "executable": "/Applications/Bruno.app/Contents/MacOS/Bruno",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Bruno\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.featured-action-card"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "etcher",
+    "name": "balenaEtcher",
+    "bundlePath": "/Applications/balenaEtcher.app",
+    "bundleIdentifier": "io.balena.etcher",
+    "executable": "/Applications/balenaEtcher.app/Contents/MacOS/balenaEtcher",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/balenaEtcher\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.gSMVcS"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "responsively",
+    "name": "Responsively App",
+    "bundlePath": "/Applications/ResponsivelyApp.app",
+    "bundleIdentifier": "app.responsively",
+    "executable": "/Applications/ResponsivelyApp.app/Contents/MacOS/ResponsivelyApp",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/ResponsivelyApp\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.rounded"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "electerm",
+    "name": "electerm",
+    "bundlePath": "/Applications/electerm.app",
+    "bundleIdentifier": "org.electerm.electerm",
+    "executable": "/Applications/electerm.app/Contents/MacOS/electerm",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^http://127\\.0\\.0\\.1:30975/[^?#\\r\\n]*$",
+      "selector": "button.ant-btn-sm:not(.ant-btn-icon-only)"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "gitkraken",
+    "name": "GitKraken Desktop",
+    "bundlePath": "/Applications/GitKraken.app",
+    "bundleIdentifier": "com.axosoft.gitkraken",
+    "executable": "/Applications/GitKraken.app/Contents/MacOS/GitKraken",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/GitKraken\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button#hosting-service-login-btn-github"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "vscodium",
+    "name": "VSCodium",
+    "bundlePath": "/Applications/VSCodium.app",
+    "bundleIdentifier": "com.vscodium",
+    "executable": "/Applications/VSCodium.app/Contents/MacOS/VSCodium",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^vscode\\-file:[^?#\\r\\n]+$",
+      "selector": "a[role=button].codicon-configure-layout-icon"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "beekeeper",
+    "name": "Beekeeper Studio",
+    "bundlePath": "/Applications/Beekeeper Studio.app",
+    "bundleIdentifier": "io.beekeeperstudio.desktop",
+    "executable": "/Applications/Beekeeper Studio.app/Contents/MacOS/Beekeeper Studio",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^app:[^?#\\r\\n]+$",
+      "selector": "a.btn.btn-flat.btn-icon.btn-block"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "wave",
+    "name": "Wave Terminal",
+    "bundlePath": "/Applications/Wave.app",
+    "bundleIdentifier": "dev.commandline.waveterm",
+    "executable": "/Applications/Wave.app/Contents/MacOS/Wave",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Wave\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.border-blue-400"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "redis-insight",
+    "name": "Redis Insight",
+    "bundlePath": "/Applications/Redis Insight.app",
+    "bundleIdentifier": "org.RedisLabs.RedisInsight-V2",
+    "executable": "/Applications/Redis Insight.app/Contents/MacOS/Redis Insight",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Redis%20Insight\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button[type=submit].btn-add"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "dbgate",
+    "name": "DbGate",
+    "bundlePath": "/Applications/DbGate.app",
+    "bundleIdentifier": "org.dbgate",
+    "executable": "/Applications/DbGate.app/Contents/MacOS/DbGate",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/DbGate\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "div.upgrade-button"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "mqttx",
+    "name": "MQTTX",
+    "bundlePath": "/Applications/MQTTX.app",
+    "bundleIdentifier": "com.electron.mqttx",
+    "executable": "/Applications/MQTTX.app/Contents/MacOS/MQTTX",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^app:[^?#\\r\\n]+$",
+      "selector": "button.primary-btn"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "compass",
+    "name": "MongoDB Compass",
+    "bundlePath": "/Applications/MongoDB Compass.app",
+    "bundleIdentifier": "com.mongodb.compass",
+    "executable": "/Applications/MongoDB Compass.app/Contents/MacOS/MongoDB Compass",
+    "transport": "pipe",
+    "arguments": [
+      "--ignoreAdditionalCommandLineFlags"
+    ],
+    "target": {
+      "urlPattern": "^file:///Applications/MongoDB%20Compass\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.leafygreen-ui-da5f2u"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "insomnia",
+    "name": "Insomnia",
+    "bundlePath": "/Applications/Insomnia.app",
+    "bundleIdentifier": "com.insomnia.app",
+    "executable": "/Applications/Insomnia.app/Contents/MacOS/Insomnia",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://insomnia\\-app\\.local/[^?#\\r\\n]*$",
+      "selector": "a.px-3.py-2"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "another-redis",
+    "name": "Another Redis Desktop Manager",
+    "bundlePath": "/Applications/Another Redis Desktop Manager.app",
+    "bundleIdentifier": "me.qii404.another-redis-desktop-manager",
+    "executable": "/Applications/Another Redis Desktop Manager.app/Contents/MacOS/Another Redis Desktop Manager",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Another%20Redis%20Desktop%20Manager\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.aside-new-connection-btn"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "theia",
+    "name": "Eclipse Theia IDE",
+    "bundlePath": "/Applications/TheiaIDE.app",
+    "bundleIdentifier": "eclipse.theia",
+    "executable": "/Applications/TheiaIDE.app/Contents/MacOS/TheiaIDE",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/TheiaIDE\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "div.toolbar-item[id=\"workbench.action.showCommands\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "podman",
+    "name": "Podman Desktop",
+    "bundlePath": "/Applications/Podman Desktop.app",
+    "bundleIdentifier": "io.podmandesktop.PodmanDesktop",
+    "executable": "/Applications/Podman Desktop.app/Contents/MacOS/Podman Desktop",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Podman%20Desktop\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button[type=\"button\"].ml-2"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "asana",
+    "name": "Asana",
+    "bundlePath": "/Applications/Asana.app",
+    "bundleIdentifier": "com.electron.asana",
+    "executable": "/Applications/Asana.app/Contents/MacOS/Asana",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://app\\.asana\\.com/[^?#\\r\\n]*$",
+      "selector": "div[role=button].PrimaryButton"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "clickup",
+    "name": "ClickUp",
+    "bundlePath": "/Applications/ClickUp.app",
+    "bundleIdentifier": "com.clickup.desktop-app",
+    "executable": "/Applications/ClickUp.app/Contents/MacOS/ClickUp",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://app\\.clickup\\.com/[^?#\\r\\n]*$",
+      "selector": "button.login-page-v4_submit"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "linear",
+    "name": "Linear",
+    "bundlePath": "/Applications/Linear.app",
+    "bundleIdentifier": "com.linear",
+    "executable": "/Applications/Linear.app/Contents/MacOS/Linear",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://linear\\.app/[^?#\\r\\n]*$",
+      "selector": "button.sx-1e0lvtw"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "miro",
+    "name": "Miro",
+    "bundlePath": "/Applications/Miro.app",
+    "bundleIdentifier": "com.electron.realtimeboard",
+    "executable": "/Applications/Miro.app/Contents/MacOS/Miro",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://miro\\.com/[^?#\\r\\n]*$",
+      "selector": "button#language-switcher-button"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "notion-calendar",
+    "name": "Notion Calendar",
+    "bundlePath": "/Applications/Notion Calendar.app",
+    "bundleIdentifier": "com.cron.electron",
+    "executable": "/Applications/Notion Calendar.app/Contents/MacOS/Notion Calendar",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^https://www\\.notion\\.so/[^?#\\r\\n]*$",
+      "selector": "div[role=\"button\"].x1b7c0jy:nth-child(2)"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "logseq",
+    "name": "Logseq",
+    "bundlePath": "/Applications/Logseq.app",
+    "bundleIdentifier": "com.logseq.logseq",
+    "executable": "/Applications/Logseq.app/Contents/MacOS/Logseq",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^lsp:[^?#\\r\\n]+$",
+      "selector": "button#search-button"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "anytype",
+    "name": "Anytype",
+    "bundlePath": "/Applications/Anytype.app",
+    "bundleIdentifier": "com.anytype.anytype",
+    "executable": "/Applications/Anytype.app/Contents/MacOS/Anytype",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Anytype\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "div.button.accent.size48"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "affine",
+    "name": "AFFiNE",
+    "bundlePath": "/Applications/AFFiNE.app",
+    "bundleIdentifier": "pro.affine.app",
+    "executable": "/Applications/AFFiNE.app/Contents/MacOS/AFFiNE",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^assets:[^?#\\r\\n]+$",
+      "selector": "button.ei8va2a"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "standard-notes",
+    "name": "Standard Notes",
+    "bundlePath": "/Applications/Standard Notes.app",
+    "bundleIdentifier": "org.standardnotes.standardnotes",
+    "executable": "/Applications/Standard Notes.app/Contents/MacOS/Standard Notes",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Standard%20Notes\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button#note-options-button"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "siyuan",
+    "name": "SiYuan",
+    "bundlePath": "/Applications/SiYuan.app",
+    "bundleIdentifier": "org.b3log.siyuan",
+    "executable": "/Applications/SiYuan.app/Contents/MacOS/SiYuan",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/SiYuan\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.choosePath"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "element",
+    "name": "Element",
+    "bundlePath": "/Applications/Element.app",
+    "bundleIdentifier": "im.riot.app",
+    "executable": "/Applications/Element.app/Contents/MacOS/Element",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^vector:[^?#\\r\\n]+$",
+      "selector": "div[role=button].mx_Dropdown_input"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "bundlePath": "/Applications/Mattermost.app",
+    "bundleIdentifier": "Mattermost.Desktop",
+    "executable": "/Applications/Mattermost.app/Contents/MacOS/Mattermost",
+    "transport": "launchservices-tcp",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^mattermost\\-desktop:[^?#\\r\\n]+$",
+      "selector": "button.three-dot-menu"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "bundlePath": "/Applications/Rocket.Chat.app",
+    "bundleIdentifier": "chat.rocket",
+    "executable": "/Applications/Rocket.Chat.app/Contents/MacOS/Rocket.Chat",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Rocket\\.Chat\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button[type=submit].rcx-button--primary"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "mailspring",
+    "name": "Mailspring",
+    "bundlePath": "/Applications/Mailspring.app",
+    "bundleIdentifier": "com.mailspring.mailspring",
+    "executable": "/Applications/Mailspring.app/Contents/MacOS/Mailspring",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Mailspring\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button.btn-continue"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "franz",
+    "name": "Franz",
+    "bundlePath": "/Applications/Franz.app",
+    "bundleIdentifier": "com.meetfranz.franz",
+    "executable": "/Applications/Franz.app/Contents/MacOS/Franz",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^franz:[^?#\\r\\n]+$",
+      "selector": "button.shadow-lg"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "freetube",
+    "name": "FreeTube",
+    "bundlePath": "/Applications/FreeTube.app",
+    "bundleIdentifier": "io.freetubeapp.freetube",
+    "executable": "/Applications/FreeTube.app/Contents/MacOS/FreeTube",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^app:[^?#\\r\\n]+$",
+      "selector": "button.navNewWindowButton"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "losslesscut",
+    "name": "LosslessCut",
+    "bundlePath": "/Applications/LosslessCut.app",
+    "bundleIdentifier": "no.mifi.losslesscut-mac",
+    "executable": "/Applications/LosslessCut.app/Contents/MacOS/LosslessCut",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/LosslessCut\\.app/Contents/Resources/[^?#\\r\\n]+$",
+      "selector": "button._button_76ud3_1:first-of-type"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "rancher",
+    "name": "Rancher Desktop",
+    "bundlePath": "/Applications/Rancher Desktop.app",
+    "bundleIdentifier": "io.rancherdesktop.app",
+    "executable": "/Applications/Rancher Desktop.app/Contents/MacOS/Rancher Desktop",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^app://\\./index\\.html$",
+      "selector": ".nav-button-container button.nav-button[data-testid=\"dashboard-button\"]:first-of-type"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "joplin",
+    "name": "Joplin",
+    "bundlePath": "/Applications/Joplin.app",
+    "bundleIdentifier": "net.cozic.joplin-desktop",
+    "executable": "/Applications/Joplin.app/Contents/MacOS/Joplin",
+    "transport": "pipe",
+    "arguments": [],
+    "target": {
+      "urlPattern": "^file:///Applications/Joplin\\.app/Contents/Resources/app\\.asar/index\\.html$",
+      "selector": ".sidebar button.sync-report-toggle[aria-controls=\"sync-report\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  },
+  {
+    "slug": "antigravity",
+    "name": "Antigravity",
+    "bundlePath": "/Applications/Antigravity.app",
+    "bundleIdentifier": "com.google.antigravity",
+    "executable": "/Applications/Antigravity.app/Contents/MacOS/Antigravity",
+    "transport": "pipe",
+    "arguments": [],
+    "ownedLocalService": {
+      "executableRelativePath": "Contents/Resources/bin/language_server"
+    },
+    "target": {
+      "urlPattern": "^https://127\\.0\\.0\\.1:[1-9][0-9]{3,4}/$",
+      "selector": "button[aria-label=\"Toggle Sidebar\"][data-testid=\"sidebar-toggle\"]"
+    },
+    "rendererRuntime": {
+      "engine": "isolated-js-v1",
+      "verification": "not-verified"
+    }
+  }
+]

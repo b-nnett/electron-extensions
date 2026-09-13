@@ -1,0 +1,31 @@
+# Owned JavaScript lifecycle and native log presentation
+
+This follow-up implements a development authoring example and a read-only log UI. It does not establish release readiness or third-party JavaScript support.
+
+## Implemented
+
+- [`docs/EXTENSION-FORMAT.md`](../../EXTENSION-FORMAT.md) specifies the agreed lexical `ea.id`, `ea.signal`, `ea.onDispose(callback)` and attributed `console.log/info/warn/error` contract. It documents cooperative Promise-returning cleanup, reverse callback order, default shared deadlines, failed-cleanup replacement blocking, and context-loss limitations. It retains build 3, production integration and app-wide coverage caveats.
+- [`examples/stylelab-script-button`](../../../examples/stylelab-script-button/README.md) contains a real version-1 mixed manifest, CSS and JS. The script adds one `ea.id`-scoped green button next to the owned fixture's `#signal-button`, logs click counts, and registers node/listener cleanup before creating those side effects. It performs no network or storage actions.
+- [`ExtensionRuntimeLogs.swift`](../../../macos/Sources/ExtensionRuntimeLogs.swift) reads only the fixed `extension-logs.json` file in a UUID session directory supplied through the existing launcher pointer resolution. Descriptor-relative directory opens and `O_NOFOLLOW` reject symlinks; `O_NONBLOCK`, regular-file checks and bounded descriptor reads reject FIFOs, directories and oversized/changing files.
+- The reader verifies schema 1, exact app key, session UUID consistency, valid extension UUIDs, increasing positive sequences, bounded source/revision/message fields and timestamps. It filters events to the selected record and its JS filenames. Limits are 500 total events, 512 KiB per file, and 4096 UTF-8 bytes per message. Metadata matching is not authentication or proof of a live connection.
+- [`ExtensionDetailsSheet.swift`](../../../macos/Sources/ExtensionDetailsSheet.swift) now has separate Runtime and Library tabs, refreshes runtime reads off the main thread once per second while open, and copies only the selected tab's logs. Missing logs say “No runtime logs recorded.” Invalid logs show a separate read error. File, level and revision remain visible with each runtime event. The segmented picker hides its redundant visual label while retaining “Log source” for accessibility.
+
+## Evidence and remaining boundaries
+
+The root's [final owned fixed-package renderer proof](../../../output/release-review/2026-09-13/fixture-javascript-35b44022-c4c9-4cda-9613-9cc2bf69cd75/report.json) passed nine checks after the core's sticky-cleanup correction, with recorded manifest/CSS/JS/core hashes and unchanged fixture content hash/CDHash. It covers the new styled button, attributed click output, duplicate prevention, disable cleanup, fresh re-enable and revision, explicit initialization after reload, failed-install cleanup and signature preservation. It is separate from GUI import, the production Dock broker and automatic navigation reapplication. The final full Node suite passed 192 tests, including 17 new cooperative lifecycle tests.
+
+The root checked the new Details UI in manager build 4 and verified the missing-runtime state and separate existing library activity. The first check found a wrapping Picker label; `.labelsHidden()` corrected it, and the [final rebuilt window](../../../output/release-review/2026-09-13/full-js-followup-runtime-final.png) was visually verified. No test or UI check inserts fake runtime logs into a user's launcher session.
+
+`ExtensionRuntimeLogsTests` adds eleven synthetic tests for exact attribution/filtering, foreign metadata, ordering and type rejection, source/revision/date validation, UTF-8 boundaries, event/file caps, missing logs, refresh and malformed files, leaf symlinks/FIFOs/directories, session/ancestor symlinks, and macOS's `/var` alias. `AuthoringInstructionsTests` adds one import test using the actual checked-in mixed package. All new tests passed in the [final native suite](../../../output/release-review/2026-09-13/full-js-followup-native-final-3.log): 248 executed, one skipped, zero failures.
+
+The first native run exposed Foundation rewriting the real `/private/var` temporary path back to its `/var` symlink even through `resolvingSymlinksInPath()`. The descriptor reader correctly refused that alias, but the redundant Foundation equality guard also rejected the actual path. The fixture now uses Darwin `realpath`; the reader validates absolute path components and uses its existing descriptor-relative `O_NOFOLLOW` traversal as the authority for all ancestors and the leaf. The added regression requires the actual path to load and the `/var` alias to remain rejected. No symlink check was relaxed.
+
+## Build 5 native product proof
+
+The [second native run](../../../output/release-review/2026-09-13/native-fixture-package-AE0BE93F-5E3F-4AE8-B522-6A92FA96230E/native-report.json) passed all 22 checks in 10.7 seconds using manager 0.1.4/build 5, actual importer/manager/library code, generated helper and its sealed runtime, and installed owned Style Lab. Library, source copy, launchers and receipts were isolated; Dock preferences were in-memory.
+
+Actual DOM/CSS observations, pointer clicks and native log reads verified import-disabled/enable, one styled button, attributed handler output, disable cleanup, fresh re-enable, changed-source re-import/removal, automatic reload and increasing log sequences. Final removal cleared the isolated library. Normal helper shutdown cleaned scripts and the temporary app profile without SIGKILL. Fixture SHA-256/CDHash matched before/after. Production log persistence now exists for this Style Lab route; the proof uses the same reader as Details.
+
+The first run exposed harness defects: `XCTUnwrap` inside an expected startup poll recorded a caught failure; generic wait assignment to `URL?` inferred nested optional completion. JSON polling now throws ordinary errors, and the session wait explicitly returns nonoptional `URL`. Both fixes were included in the passing run.
+
+This does not claim GUI import clicks, a filled Details sheet, real Dock changes or third-party JS compatibility. Those UI checks and broader CSS/JS app coverage remain separate verification.

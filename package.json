@@ -1,0 +1,26 @@
+{
+  "name": "extensions-anywhere",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A native macOS manager for CSS and JavaScript extensions in supported desktop app renderers.",
+  "scripts": {
+    "build:macos": "node scripts/build-macos.mjs",
+    "build:macos:release": "node scripts/build-macos.mjs --release",
+    "prepare:update": "node scripts/prepare-update.mjs",
+    "start:macos": "npm run build:macos && open 'dist/Extensions Anywhere.app'",
+    "test:macos": "swift test --package-path macos --build-system native",
+    "build:fixture": "node scripts/build-fixture.mjs",
+    "start": "electron controller/main.cjs",
+    "demo": "npm run build:fixture && npm start",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "verify:fixture-js": "node scripts/testing/verify-fixture-extension-runtime.mjs",
+    "verify:figma": "node scripts/verify-figma-pipe.mjs"
+  },
+  "devDependencies": {
+    "@electron/packager": "20.3.0",
+    "electron": "44.2.0"
+  },
+  "dependencies": { "ws": "8.21.3" }
+}

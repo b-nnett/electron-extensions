@@ -1,0 +1,41 @@
+# Claude assisted renderer bridge
+
+The product now includes a built-in Claude broker using the app's user-enabled main-process inspector. The transport has passed an actual signed **owned Style Lab** fixture trial. This report does **not** claim that the new production broker has passed a native Claude trial; that separate candidate-build test remains required.
+
+## Product operation and boundaries
+
+`scripts/dock-claude-session.mjs` accepts only `--library <absolute path> --output <new session directory>`. It adopts a single exactly verified `/Applications/Claude.app` process, or opens that installed app normally without debugging flags. It never toggles Developer Mode, edits private preferences, changes app bundles/signatures, quits an adopted app, or enables the main debugger automatically.
+
+The helper publishes `waiting-for-debugger` with live process identity and a fresh heartbeat until the user activates Claude's **Developer → Enable Main Process Debugger** menu. If necessary, the user first enables Developer Mode through **Help → Troubleshooting**. Developer Mode can persist; the main debugger must be enabled again in each fresh process. The menu behavior and previous CSS-only trials are documented in [the historical Claude investigation](../../CLAUDE-DEVELOPER-MODE.md).
+
+Every bridge operation checks the selected process's PID, kernel start time, UID and exact executable, and requires the sole listener on port 9229 to be that PID at `127.0.0.1`. The inspector list must contain one Node target with an exact loopback UUID endpoint. The bridge waits for exactly one live `window` webContents on **`https://claude.ai/new`**. Other Claude routes remain outside this implementation. An existing renderer debugger or DevTools is left untouched.
+
+`lib/main-inspector-renderer.mjs` sends a fixed `globalThis` lookup and fixed `Runtime.callFunctionOn` declarations to the main inspector. Renderer command data, including extension source, is passed separately as JSON arguments. Imported source is compiled/evaluated only through `webContents.debugger.sendCommand` into the shared renderer controller's owned isolated world. The relay permits only its bounded CSS/DOM enablement and renderer runtime commands. It forbids main-process extension evaluation, Node globals, bypassing CSP, universal-access worlds, arbitrary targets, and production `Page.reload`.
+
+The main relay tracks owned stylesheet IDs and execution contexts, pins unique context IDs for evaluation, checks the exact renderer route and uniqueness before/after each command, and forwards only owned runtime context/console/exception events and top-frame navigation/load events. It ignores sub-session and unrelated app console events. The event queue is bounded to 256 entries / 512 KiB; individual events and responses are also bounded. Host extension logs retain the existing schema 1 envelope with target ID and session UUID, monotonically sequenced across reloads, and the existing 500-entry / 512 KiB file limit.
+
+Selection keeps the existing limits: 64 enabled target records, 32 source files per record, UUID identities, 64 KiB joined CSS, and 256 KiB JavaScript. CSS success means exact stylesheet readback. JavaScript success means controller lifecycle state. A recoverable extension initializer failure leaves independent healthy extensions running and reports the failed record rather than declaring the entire runtime healthy.
+
+## Stop and recovery behavior
+
+Disabling the last extension removes CSS and registered JavaScript resources while keeping the helper and its verified bridge alive. Stopping the helper performs registered script disposal, empties its own stylesheet, detaches only its own renderer debugger, and disconnects the inspector client. It does not request target termination. Reports distinguish `launchOwnership` (`adopted` or `normal-launch-requested`), `jsCleanupVerified`, `stylesheetRemoved`, `rendererDebuggerDetached`, and a fresh final kernel process observation. Closing this inspector client does not itself disable the app's main inspector; the listener may remain available until normal app quit.
+
+A detach event revokes ownership, so cleanup never detaches DevTools subsequently attached by someone else. An abandoned bridge has a 30-second idle lease that detaches its owned renderer debugger and removes its relay listeners. This lease **does not verify extension cleanup** after a broker crash. Failed or uncertain cleanup is reported honestly; normal app quit/reopen creates a fresh renderer. The full main inspector remains a powerful app-provided interface: the fixed command list limits this adapter, not other local inspector clients.
+
+## Verification
+
+Synthetic tests in `tests/main-inspector-renderer.test.mjs` use distinct main and renderer VMs and the real shared controller. They prove source is carried as renderer data, main globals remain unchanged, owner and route changes refuse commands, pre-existing/replacement DevTools is never displaced, unrelated console is excluded, and privileged/unowned CDP requests are rejected. `tests/claude-extensions.test.mjs` covers the fixed CLI/registry/listener/endpoint policy, selection bounds, navigation-aware stylesheet cleanup, and stopped-write refusal with cleanup still allowed. See [focused test output](../../../output/release-review/2026-09-13/claude-bridge-focused-tests.log).
+
+The fixed runner `scripts/testing/verify-main-inspector-renderer.mjs` accepts no target arguments. It opens only `/Applications/Style Lab.app` with a fresh temporary profile and an ephemeral user-facing Node inspector flag, verifies that child and its sole listener on every request, and uses the fixed owned-fixture branch of the same relay. The fixture-only branch permits test `Page.reload`; the Claude branch does not. Its final cleanup sends SIGTERM only to its exact owned fixture child after separately proving that bridge shutdown left the app alive.
+
+[First complete owned proof](../../../output/release-review/2026-09-13/main-inspector-renderer-a3ecce37-79bc-4823-b340-c5b91aef99cf/report.json) passed CSS, script initialization/idempotence, button click logs, independent syntax failure, attributed uncaught handler error, automatic reload into a fresh unique context, disable/re-enable, registered disposal and debugger detach. All 265 bundled files and the fixture signature were unchanged. An earlier failed proof is preserved: its observation incorrectly queried through an already disposed controller after successful cleanup; the runner now directly reads the already-owned unique renderer context for that final assertion.
+
+[Final-source owned proof](../../../output/release-review/2026-09-13/main-inspector-renderer-9c05ea38-c20f-498b-a435-ec5a5d11585e/report.json) repeats the same successful checks with the final transport and stylesheet guards.
+
+Independent security review found no additional blocking defect within this exact-route adapter scope. The [full Node suite](../../../output/release-review/2026-09-13/claude-bridge-full-node-tests.log) passed **254/254 tests**, with no failures or skips. The [runtime packaging checks](../../../output/release-review/2026-09-13/claude-runtime-packaging-tests.log) also passed **5/5**, including loading all four actual broker dependency graphs solely from a relocated Runtime directory.
+
+Release acceptance still requires the packaged native Claude helper flow, its manual debugger setup, imported CSS+JS and normal reload, attributed logs, last-disable survival, complete cleanup, and unchanged installed Claude signing and full fingerprints. Existing historical Claude CSS proofs cannot substitute for that new mixed-runtime trial.
+
+## API references
+
+The relay uses the documented Electron [Debugger API](https://www.electronjs.org/docs/latest/api/debugger), including its attach/detach and message ownership semantics, and the documented [main-process debugging interface](https://www.electronjs.org/docs/latest/tutorial/debugging-main-process). Claude's [MCP App troubleshooting documentation](https://claude.com/docs/connectors/building/mcp-apps/troubleshooting) describes Developer Mode; the installed-app investigation establishes the particular Main Process Debugger menu and external inspector behavior for the tested versions.

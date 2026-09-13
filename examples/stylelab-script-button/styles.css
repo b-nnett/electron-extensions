@@ -1,0 +1,13 @@
+.ea-stylelab-script-button {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 16px;
+  border: 1px solid #15803d;
+  border-radius: 12px;
+  background: #16a34a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.ea-stylelab-script-button:hover { background: #15803d; }
+.ea-stylelab-script-button:focus-visible { outline: 3px solid #86efac; outline-offset: 3px; }

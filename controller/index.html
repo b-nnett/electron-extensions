@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Extensions Anywhere</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-mark" aria-hidden="true">↗</div>
+    <strong>Extensions Anywhere</strong>
+    <span class="badge">PROOF OF CONCEPT</span>
+  </header>
+  <main>
+    <div class="intro">
+      <div><p class="eyebrow">YOUR APP, A LITTLE MORE YOU</p><h1>Try a different look.</h1></div>
+      <span class="version">STYLE LAB / 01</span>
+    </div>
+    <section class="target-card" aria-label="Test app connection">
+      <div class="target-icon" aria-hidden="true">S</div>
+      <div class="target-copy"><h2>Style Lab</h2><p>Our signed Electron test app</p></div>
+      <span id="connection" class="connection">Offline</span>
+      <button id="launch" class="primary" type="button" disabled>Launch app <span aria-hidden="true">↗</span></button>
+      <button id="stop" class="secondary" type="button" disabled>Stop</button>
+    </section>
+    <div class="workspace">
+      <section class="editor-panel" aria-label="Stylesheet editor">
+        <div class="panel-heading"><h2>Custom stylesheet</h2><span class="file-label">CSS</span></div>
+        <div class="presets" aria-label="Stylesheet presets">
+          <span>START WITH</span>
+          <button id="preset-neon" class="preset selected" type="button" aria-pressed="true"><i class="swatch neon" aria-hidden="true"></i>Neon</button>
+          <button id="preset-lilac" class="preset" type="button" aria-pressed="false"><i class="swatch lilac" aria-hidden="true"></i>Lilac</button>
+        </div>
+        <label class="sr-only" for="css-editor">CSS applied to the test app</label>
+        <textarea id="css-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="editor-hint"></textarea>
+        <p id="editor-hint" class="editor-hint">Targets <code>#signal-button</code> in the separate app. <kbd>⌘ Enter</kbd> to apply.</p>
+        <div class="editor-actions"><button id="apply" class="primary" type="button" disabled>Apply stylesheet <span aria-hidden="true">↗</span></button><button id="remove" class="secondary" type="button" disabled>Remove</button></div>
+      </section>
+      <aside>
+        <section class="details-panel" aria-label="Live button styles">
+          <div class="panel-heading"><h2>Live button</h2><span id="style-status" class="small-tag">ORIGINAL</span></div>
+          <p class="panel-description">Computed appearance from the running app.</p>
+          <dl class="style-values"><div><dt>Background</dt><dd id="background">—</dd></div><div><dt>Text</dt><dd id="foreground">—</dd></div><div><dt>Corner radius</dt><dd id="radius">—</dd></div></dl>
+          <button id="reload" class="secondary full-width" type="button" disabled>Reload app <span aria-hidden="true">↻</span></button>
+          <p class="tiny">Active customizations reapply after a reload.</p>
+        </section>
+        <section class="details-panel integrity-panel" aria-label="Signature and bundle verification">
+          <div class="panel-heading"><h2>Bundle integrity</h2><span id="integrity-icon" aria-hidden="true">○</span></div>
+          <p id="integrity-status" class="integrity-status">Awaiting a baseline</p>
+          <p id="integrity-detail" class="panel-description">Launch captures the original signature and a fingerprint of every bundle file.</p>
+          <button id="verify" class="secondary full-width" type="button" disabled>Verify unchanged</button>
+          <p class="tiny">Locally ad-hoc signed fixture.</p>
+        </section>
+      </aside>
+    </div>
+    <section class="details-panel demo-panel" aria-label="JavaScript button demo">
+      <div class="panel-heading"><h2>Add a button with JavaScript</h2><span id="demo-status" class="small-tag">NOT ADDED</span></div>
+      <p class="panel-description">Adds a new button inside Style Lab. Each click runs this handler and appears below.</p>
+      <pre class="demo-code"><code>console.log('[Extensions Anywhere] Button clicked', clicks);</code></pre>
+      <div class="demo-actions"><button id="install-button" class="primary" type="button" disabled>Add demo button</button><button id="remove-button" class="secondary" type="button" disabled>Remove demo button</button></div>
+      <div id="console-feed" class="console-feed" role="log" aria-live="polite" aria-label="Demo button console output"><p class="console-empty">Button clicks will appear here.</p></div>
+      <p class="tiny">Shows the latest 20 demo messages. Reloading resets the button's click count.</p>
+    </section>
+    <div id="status" class="status-bar" role="status" aria-live="polite"><span id="status-dot" class="status-dot"></span><span id="status-message">Loading controller…</span></div>
+    <p id="error" class="error" role="alert" hidden></p>
+    <footer><span>LIVE CUSTOMIZATIONS. ORIGINAL SIGNATURE.</span><span>LOCAL EXPERIMENT</span></footer>
+  </main>
+</body>
+</html>

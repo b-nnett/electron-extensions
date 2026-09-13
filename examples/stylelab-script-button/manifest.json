@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "name": "Style Lab script button",
+  "description": "Add a green button that logs its click count and removes itself when disabled. Owned Style Lab development example.",
+  "version": "1.0.0",
+  "css": ["styles.css"],
+  "js": ["main.js"]
+}

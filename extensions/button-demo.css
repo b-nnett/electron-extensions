@@ -1,0 +1,16 @@
+#extensions-anywhere-demo-button {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 11px 16px;
+  border: 1px solid #9481b1;
+  border-radius: 8px;
+  background: #f0e8ff;
+  color: #553376;
+  font: 600 12px -apple-system, BlinkMacSystemFont, sans-serif;
+  cursor: pointer;
+}
+#extensions-anywhere-demo-button:focus-visible {
+  outline: 3px solid #9481b1;
+  outline-offset: 3px;
+}

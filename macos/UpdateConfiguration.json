@@ -1,0 +1,6 @@
+{
+  "repository": "b-nnett/electron-extensions",
+  "feedURL": "https://github.com/b-nnett/electron-extensions/releases/latest/download/appcast.xml",
+  "publicKey": "sek+Mp0TedaOAi0QoQA1luAcjgXWnXDQW6pbjnCVyy8=",
+  "keychainAccount": "dev.extensions-anywhere.app"
+}

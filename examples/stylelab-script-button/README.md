@@ -1,0 +1,15 @@
+# Style Lab script button
+
+Development example for the project-owned `/Applications/Style Lab.app` (`dev.extensionsanywhere.stylelab`). It uses the agreed `ea.id`, `ea.signal`, `ea.onDispose(callback)` and attributed lexical console contract. **Build 3 does not execute imported JS.** Store this package disabled there; a new verified controlled runtime is required to run it. This example makes no third-party app support claim.
+
+The checked-in package and cooperative core passed a [nine-check renderer proof on 2026-09-13](../../output/release-review/2026-09-13/fixture-javascript-35b44022-c4c9-4cda-9613-9cc2bf69cd75/report.json), using the owned built fixture under `dist/Style Lab-darwin-arm64/Style Lab.app`. Creation, click logs, duplicate prevention, cleanup, fresh re-enable/revision, explicit reload initialization and unchanged signing passed. The test did not use GUI import or the production Dock broker and did not verify automatic reapplication after reload.
+
+The later [build 5 native product proof](../../output/release-review/2026-09-13/native-fixture-package-AE0BE93F-5E3F-4AE8-B522-6A92FA96230E/native-report.json) passed 22 checks using actual importer/manager/library/helper/broker code against installed owned Style Lab, an isolated library and an in-memory Dock. It copied this package and added an independent fixture-control CSS rule to measure stylesheet removal. Clicks, native logs, disable/re-enable, changed-source re-import, automatic reload, normal cleanup and unchanged signing passed. It was not a GUI-click or real Dock test.
+
+Source evidence: `fixture/index.html` provides the `#signal-button` anchor. The example adds its own button immediately after that anchor and does not change the original button or app files. The node ID is `ea-stylelab-script-button-<extension record UUID>` and its class is `ea-stylelab-script-button`.
+
+On click, `data-click-count` and button text increment and the lexical console records `Style Lab script button clicked` followed by the primitive count. Installation logs `Style Lab script button ready`; disposal removes the listener/node and logs `Style Lab script button removed`. Cleanup is registered before those DOM side effects. Two separately imported records have different node IDs.
+
+Validation for the controlled runtime: import this manifest, check the added green button, click once and confirm count 1 and its attributed log, disable and confirm the node/listener and CSS are removed, then re-enable and confirm one fresh button at count 0. Check navigation/revision replacement separately. Do not mistake metadata import or the older fixed ButtonDemo for this runtime proof. See [the lifecycle contract](../../docs/EXTENSION-FORMAT.md).
+
+Navigation, a crash or a lost connection may prevent cleanup callbacks from running. A disposal failure must block replacement of the affected extension until document reload while allowing other callbacks/extensions to finish. No network, storage or persistent global side effects are used by this example.

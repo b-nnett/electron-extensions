@@ -1,0 +1,23 @@
+node_modules/
+dist/
+output/
+.DS_Store
+macos/.build/
+macos/.swiftpm/
+
+# Private local review receipts and app captures; publish the Markdown findings.
+docs/release-review/2026-09-13/*.log
+docs/release-review/2026-09-13/*.json
+docs/release-review/2026-09-13/*.png
+
+# Local credentials and signing material never belong in source releases.
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.keychain
+*.keychain-db
+
+# Unrelated workspace project.
+domain-typo-generator/

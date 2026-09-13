@@ -1,0 +1,7 @@
+/* ChatGPT 26.901.31953 (7868), English UI.
+ * The visible text is "Voice"; its accessible label is "Start new voice chat".
+ * Scope to the footer toolbar to preserve the composer's voice control.
+ */
+.h-toolbar button[aria-label="Start new voice chat"] {
+  display: none !important;
+}

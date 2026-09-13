@@ -1,0 +1,6 @@
+/* Tested on Figma 126.8.18's login screen through built-in DevTools. */
+button[type="submit"] {
+  background-color: #16a34a !important;
+  color: white !important;
+  background-image: none !important;
+}

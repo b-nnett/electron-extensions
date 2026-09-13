@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "name": "Hide Sidebar Voice Button",
+  "description": "Removes the Voice button from the bottom of the ChatGPT sidebar (English UI).",
+  "version": "1.0.1",
+  "css": ["styles.css"],
+  "js": []
+}

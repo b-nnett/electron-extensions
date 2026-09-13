@@ -1,0 +1,8 @@
+{
+  "manifest_version": 1,
+  "name": "Green buttons",
+  "description": "Give buttons a green background and white text.",
+  "version": "1.0.0",
+  "css": ["styles.css"],
+  "js": []
+}

@@ -1,0 +1,1598 @@
+[
+  {
+    "slug": "slack",
+    "name": "Slack",
+    "bundlePath": "/Applications/Slack.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/slack/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "vscode",
+    "name": "Visual Studio Code",
+    "bundlePath": "/Applications/Visual Studio Code.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/vscode/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "bundlePath": "/Applications/Notion.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/notion/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "signal",
+    "name": "Signal",
+    "bundlePath": "/Applications/Signal.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/signal/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "postman",
+    "name": "Postman",
+    "bundlePath": "/Applications/Postman.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/postman/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "obsidian",
+    "name": "Obsidian",
+    "bundlePath": "/Applications/Obsidian.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/obsidian/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "github",
+    "name": "GitHub Desktop",
+    "bundlePath": "/Applications/GitHub Desktop.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/github/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "discord",
+    "name": "Discord",
+    "bundlePath": "/Applications/Discord.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/discord/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "figma",
+    "name": "Figma",
+    "bundlePath": "/Applications/Figma.app",
+    "cohort": "original-nine",
+    "cssEvidence": "output/compatibility/figma/pipe/2026-09-05T16-02-59.975Z/report.json",
+    "jsStatus": "not-verified",
+    "cssStatus": "verified"
+  },
+  {
+    "slug": "antigravity",
+    "name": "Google Antigravity",
+    "bundlePath": "/Applications/Antigravity.app",
+    "cohort": "additional-forty",
+    "category": "AI developer workspace",
+    "alreadyInstalled": true,
+    "electron": {
+      "confirmed": true,
+      "method": "read-only inspection of installed vendor-signed artifact",
+      "declaredVersion": "41.0.2",
+      "evidence": "Embedded Electron Framework Info.plist declares com.github.Electron.framework and CFBundleVersion 41.0.2.",
+      "sources": [
+        "/Applications/Antigravity.app/Contents/Frameworks/Electron Framework.framework/Resources/Info.plist"
+      ]
+    },
+    "downloadPage": "https://antigravity.google/download",
+    "popularity": {
+      "type": "Homebrew cask install analytics",
+      "value": {
+        "days30": 3605,
+        "days90": 10711,
+        "days365": 57566
+      },
+      "source": "https://formulae.brew.sh/cask/antigravity",
+      "limitations": "Primary package-manager install counter only; excludes other install methods and is not active users or a vendor-wide adoption count."
+    },
+    "caveats": [
+      "Google now distinguishes Antigravity 2.0 and Antigravity IDE. Record the actual installed bundle/version in the trial; do not conflate product surfaces."
+    ],
+    "install": {
+      "url": "https://storage.googleapis.com/antigravity-public/antigravity-hub/2.12.2-6298742303883264/darwin-arm/Antigravity.dmg",
+      "sha256": "9f22b1f7a444d3c0c99483528963381f45e287237e3ba18bedc8bf47935b3d18",
+      "type": "dmg",
+      "appName": "Antigravity.app",
+      "source": "https://formulae.brew.sh/api/cask/antigravity.json",
+      "caskVersion": "2.12.2,6298742303883264",
+      "estimatedCompressedBytes": 0
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/antigravity/pipe/2026-09-05T19-03-06.499Z/report.json"
+  },
+  {
+    "slug": "tabby",
+    "name": "Tabby",
+    "bundlePath": "/Applications/Tabby.app",
+    "cohort": "additional-forty",
+    "category": "Terminal",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "38",
+      "evidence": "Release package declares Electron 38; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/Eugeny/tabby/blob/v1.0.235/package.json"
+      ]
+    },
+    "downloadPage": "https://tabby.sh",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 74344,
+      "approximate": false,
+      "source": "https://api.github.com/repos/Eugeny/tabby",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/Eugeny/tabby/releases/download/v1.0.235/tabby-1.0.235-macos-arm64.zip",
+      "sha256": "1080a05d44c8acfe9301ec56c5ffa3ab0e472086d1ace8fe8a5e2cbf9f71c7d5",
+      "type": "zip",
+      "appName": "Tabby.app",
+      "source": "https://formulae.brew.sh/api/cask/tabby.json",
+      "caskVersion": "1.0.235",
+      "estimatedCompressedBytes": 150174643
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/tabby/pipe/2026-09-05T19-30-20.793Z/report.json"
+  },
+  {
+    "slug": "cursor",
+    "name": "Cursor",
+    "bundlePath": "/Applications/Cursor.app",
+    "cohort": "additional-forty",
+    "category": "AI code editor",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary vendor engineering post",
+      "declaredVersion": null,
+      "evidence": "April 21, 2026 article describes Visual Studio Code and Electron foundations and renderer processes for both editor and agents window.",
+      "sources": [
+        "https://cursor.com/blog/app-stability",
+        "https://cursor.com/licenses"
+      ]
+    },
+    "downloadPage": "https://cursor.com/download",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 33200,
+      "approximate": true,
+      "source": "https://github.com/cursor/cursor",
+      "limitations": "Official public issue/community repository, not product source; interest proxy only, not users."
+    },
+    "caveats": [
+      "Engineering source post establishes current-generation Electron use; the downloaded signed artifact still requires local version/framework/signature inspection."
+    ],
+    "install": {
+      "url": "https://downloads.cursor.com/production/90de2327392570a5f5f625c656c6749d228e6437/darwin/arm64/Cursor-darwin-arm64.zip",
+      "sha256": "7eff6b6e511c24a03152bb7730ca5ed11457dfc1feb3288c57f05426dd04013d",
+      "type": "zip",
+      "appName": "Cursor.app",
+      "source": "https://formulae.brew.sh/api/cask/cursor.json",
+      "caskVersion": "3.19.7,90de2327392570a5f5f625c656c6749d228e6437",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/cursor/pipe/2026-09-05T19-30-16.831Z/report.json"
+  },
+  {
+    "slug": "bruno",
+    "name": "Bruno",
+    "bundlePath": "/Applications/Bruno.app",
+    "cohort": "additional-forty",
+    "category": "API client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "~37.6.1",
+      "evidence": "Release package declares Electron ~37.6.1; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/usebruno/bruno/blob/v4.1.0/packages/bruno-electron/package.json"
+      ]
+    },
+    "downloadPage": "https://www.usebruno.com/downloads",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 46771,
+      "approximate": false,
+      "source": "https://api.github.com/repos/usebruno/bruno",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/usebruno/bruno/releases/download/v4.1.0/bruno_4.1.0_arm64_mac.dmg",
+      "sha256": "31af43035099556492ce2196a87e88234caafdc897ccc2c9bfa62a321fc5df8e",
+      "type": "dmg",
+      "appName": "Bruno.app",
+      "source": "https://formulae.brew.sh/api/cask/bruno.json",
+      "caskVersion": "4.1.0",
+      "estimatedCompressedBytes": 167012145
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/bruno/pipe/2026-09-05T19-13-10.680Z/report.json"
+  },
+  {
+    "slug": "etcher",
+    "name": "balenaEtcher",
+    "bundlePath": "/Applications/balenaEtcher.app",
+    "cohort": "additional-forty",
+    "category": "Developer utility",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "37.2.4",
+      "evidence": "Release package declares Electron 37.2.4; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/balena-io/etcher/blob/v2.1.6/package.json"
+      ]
+    },
+    "downloadPage": "https://etcher.balena.io",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 34301,
+      "approximate": false,
+      "source": "https://api.github.com/repos/balena-io/etcher",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/balena-io/etcher/releases/download/v2.1.6/balenaEtcher-2.1.6-arm64.dmg",
+      "sha256": "ecf71fb5e74803ea8d7d16c54378a6a8d964e9808594b867c088222a8cfe3d2b",
+      "type": "dmg",
+      "appName": "balenaEtcher.app",
+      "source": "https://formulae.brew.sh/api/cask/balenaetcher.json",
+      "caskVersion": "2.1.6",
+      "estimatedCompressedBytes": 156522199
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/etcher/pipe/2026-09-05T19-37-05.796Z/report.json"
+  },
+  {
+    "slug": "responsively",
+    "name": "Responsively App",
+    "bundlePath": "/Applications/ResponsivelyApp.app",
+    "cohort": "additional-forty",
+    "category": "Web development browser",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "^27.0.4",
+      "evidence": "Release package declares Electron ^27.0.4; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/responsively-org/responsively-app/blob/v1.18.0/desktop-app/package.json"
+      ]
+    },
+    "downloadPage": "https://responsively.app/download",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 25155,
+      "approximate": false,
+      "source": "https://api.github.com/repos/responsively-org/responsively-app",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [
+      "The release source declares Electron 27 despite a February 2026 application release; actual bundle/runtime should be inspected."
+    ],
+    "install": {
+      "url": "https://github.com/responsively-org/responsively-app-releases/releases/download/v1.18.0/ResponsivelyApp-1.18.0-arm64.dmg",
+      "sha256": "870ef97ae7b23758411841f0c35058ddd36ba2dce51b1f8a48063664dc12d92b",
+      "type": "dmg",
+      "appName": "ResponsivelyApp.app",
+      "source": "https://formulae.brew.sh/api/cask/responsively.json",
+      "caskVersion": "1.18.0",
+      "estimatedCompressedBytes": 111987056
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/responsively/pipe/2026-09-05T19-38-48.737Z/report.json"
+  },
+  {
+    "slug": "electerm",
+    "name": "electerm",
+    "bundlePath": "/Applications/electerm.app",
+    "cohort": "additional-forty",
+    "category": "Terminal",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "42.8.1",
+      "evidence": "Release package declares Electron 42.8.1.",
+      "sources": [
+        "https://github.com/electerm/electerm/blob/v5.3.26/package.json"
+      ]
+    },
+    "downloadPage": "https://electerm.org",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 15000,
+      "approximate": true,
+      "source": "https://github.com/electerm/electerm",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/electerm/electerm/releases/download/v5.3.26/electerm-5.3.26-mac-arm64.dmg",
+      "sha256": "19b19049ac696f2c98bc6a5cd1c6a5079b5b12aa2944a0a6798e012a9a66d723",
+      "type": "dmg",
+      "appName": "electerm.app",
+      "source": "https://formulae.brew.sh/api/cask/electerm.json",
+      "caskVersion": "5.3.26",
+      "estimatedCompressedBytes": 113348846
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/electerm/pipe/2026-09-05T19-44-57.876Z/report.json"
+  },
+  {
+    "slug": "gitkraken",
+    "name": "GitKraken Desktop",
+    "bundlePath": "/Applications/GitKraken.app",
+    "cohort": "additional-forty",
+    "category": "Git client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary vendor release notes",
+      "declaredVersion": "41",
+      "evidence": "Version 12.4.1 release notes state the Electron upgrade to v41.",
+      "sources": [
+        "https://support.gitkraken.com/gitkraken-client/current/"
+      ]
+    },
+    "downloadPage": "https://gitkraken.com/download/mac-apple-silicon",
+    "popularity": {
+      "type": "Vendor-reported platform reach",
+      "value": "over 40 million developers across 100,000 organizations",
+      "source": "https://gitkraken.com/about",
+      "limitations": "Across GitKraken products, including extensions; not Desktop-only users. Historical Desktop/client figures also exist but should not be presented as current."
+    },
+    "caveats": [
+      "Do not connect repositories or start coding agents for a cosmetic button test.",
+      "Vendor pages currently differ on trial duration; no duration-dependent assumption is needed for the initial-screen test."
+    ],
+    "install": {
+      "url": "https://api.gitkraken.dev/releases/production/darwin/arm64/12.4.1/GitKraken-v12.4.1.zip",
+      "sha256": "c6180c11da66fc0af393ac0c2efbd81e475528feb9b06525336c07d221af7f4a",
+      "type": "zip",
+      "appName": "GitKraken.app",
+      "source": "https://formulae.brew.sh/api/cask/gitkraken.json",
+      "caskVersion": "12.4.1",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/gitkraken/pipe/2026-09-05T19-33-25.431Z/report.json"
+  },
+  {
+    "slug": "vscodium",
+    "name": "VSCodium",
+    "bundlePath": "/Applications/VSCodium.app",
+    "cohort": "additional-forty",
+    "category": "Code editor",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": null,
+      "evidence": "Project build/readme explicitly uses Electron.",
+      "sources": [
+        "https://github.com/VSCodium/vscodium/blob/1.126.04524/README.md"
+      ]
+    },
+    "downloadPage": "https://vscodium.com",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 33129,
+      "approximate": false,
+      "source": "https://api.github.com/repos/VSCodium/vscodium",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/VSCodium/vscodium/releases/download/1.126.04524/VSCodium-darwin-arm64-1.126.04524.zip",
+      "sha256": "f21ee52629eb5e39c055daea70118b7a6055c639aecf3dad05e1997a9ad83ac0",
+      "type": "zip",
+      "appName": "VSCodium.app",
+      "source": "https://formulae.brew.sh/api/cask/vscodium.json",
+      "caskVersion": "1.126.04524",
+      "estimatedCompressedBytes": 208778484
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/vscodium/pipe/2026-09-05T19-35-08.100Z/report.json"
+  },
+  {
+    "slug": "beekeeper",
+    "name": "Beekeeper Studio",
+    "bundlePath": "/Applications/Beekeeper Studio.app",
+    "cohort": "additional-forty",
+    "category": "Database client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "39.8.10",
+      "evidence": "Release package declares Electron 39.8.10; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/beekeeper-studio/beekeeper-studio/blob/v6.0.5/apps/studio/package.json"
+      ]
+    },
+    "downloadPage": "https://www.beekeeperstudio.io/get",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 23553,
+      "approximate": false,
+      "source": "https://api.github.com/repos/beekeeper-studio/beekeeper-studio",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking.",
+      "additional": {
+        "type": "Vendor-reported downloads",
+        "value": "over 2.5 million",
+        "source": "https://www.beekeeperstudio.io/community/",
+        "limitations": "Cumulative downloads across platforms, not active users."
+      }
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v6.0.5/Beekeeper-Studio-6.0.5-arm64.dmg",
+      "sha256": "cb2f0e3ac743a69d15d2cb5ba2a48f5679304d6c8fdc10b77a8d08d635b16183",
+      "type": "dmg",
+      "appName": "Beekeeper Studio.app",
+      "source": "https://formulae.brew.sh/api/cask/beekeeper-studio.json",
+      "caskVersion": "6.0.5",
+      "estimatedCompressedBytes": 282147509
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/beekeeper/pipe/2026-09-05T19-43-16.706Z/report.json"
+  },
+  {
+    "slug": "wave",
+    "name": "Wave Terminal",
+    "bundlePath": "/Applications/Wave.app",
+    "cohort": "additional-forty",
+    "category": "Terminal",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "^41.1.0",
+      "evidence": "Release package declares Electron ^41.1.0; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/wavetermdev/waveterm/blob/v0.14.5/package.json"
+      ]
+    },
+    "downloadPage": "https://www.waveterm.dev/download",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 22214,
+      "approximate": false,
+      "source": "https://api.github.com/repos/wavetermdev/waveterm",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://dl.waveterm.dev/releases-w2/Wave-darwin-arm64-0.14.5.dmg",
+      "sha256": "8d72ae31bd2c3a81356d55ec86e70ea284a65bde117b52834529da3e2e40ff39",
+      "type": "dmg",
+      "appName": "Wave.app",
+      "source": "https://formulae.brew.sh/api/cask/wave.json",
+      "caskVersion": "0.14.5",
+      "estimatedCompressedBytes": 200257009
+    },
+    "cssStatus": "observed-incomplete",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/wave/pipe/2026-09-05T19-49-09.220Z/report.json"
+  },
+  {
+    "slug": "redis-insight",
+    "name": "Redis Insight",
+    "bundlePath": "/Applications/Redis Insight.app",
+    "cohort": "additional-forty",
+    "category": "Database client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "^41.7.2",
+      "evidence": "Release package declares Electron ^41.7.2; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/redis/RedisInsight/blob/3.8.0/package.json"
+      ]
+    },
+    "downloadPage": "https://redis.io/insight/",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 8817,
+      "approximate": false,
+      "source": "https://api.github.com/repos/RedisInsight/RedisInsight",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/redis/RedisInsight/releases/download/3.8.0/Redis-Insight-mac-arm64.dmg",
+      "sha256": "af58c218b09b2a3d10ba6f296969fcd792a6544ff0dbd89845804eab86f05ddb",
+      "type": "dmg",
+      "appName": "Redis Insight.app",
+      "source": "https://formulae.brew.sh/api/cask/redis-insight.json",
+      "caskVersion": "3.8.0",
+      "estimatedCompressedBytes": 134309487
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/redis-insight/pipe/2026-09-05T19-48-26.544Z/report.json"
+  },
+  {
+    "slug": "dbgate",
+    "name": "DbGate",
+    "bundlePath": "/Applications/DbGate.app",
+    "cohort": "additional-forty",
+    "category": "Database client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "38.6.0",
+      "evidence": "Release package declares Electron 38.6.0; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/dbgate/dbgate/blob/v7.2.6/app/package.json"
+      ]
+    },
+    "downloadPage": "https://dbgate.io/download/",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 7297,
+      "approximate": false,
+      "source": "https://api.github.com/repos/dbgate/dbgate",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/dbgate/dbgate/releases/download/v7.2.6/dbgate-7.2.6-mac_arm64.dmg",
+      "sha256": null,
+      "type": "dmg",
+      "appName": "DbGate.app",
+      "source": "https://formulae.brew.sh/api/cask/dbgate.json",
+      "caskVersion": "7.2.6",
+      "estimatedCompressedBytes": 176831364
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/dbgate/pipe/2026-09-05T19-50-23.262Z/report.json"
+  },
+  {
+    "slug": "mqttx",
+    "name": "MQTTX",
+    "bundlePath": "/Applications/MQTTX.app",
+    "cohort": "additional-forty",
+    "category": "Protocol development client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "39.2.7",
+      "evidence": "Release package declares Electron 39.2.7; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/emqx/MQTTX/blob/v1.13.0/package.json"
+      ]
+    },
+    "downloadPage": "https://mqttx.app/downloads",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 5043,
+      "approximate": false,
+      "source": "https://api.github.com/repos/emqx/MQTTX",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/emqx/MQTTX/releases/download/v1.13.0/MQTTX-1.13.0-arm64.dmg",
+      "sha256": "0c5c012018493194528fa2ada5c5034f2bd24538e1a1e86d58192f768451cb46",
+      "type": "dmg",
+      "appName": "MQTTX.app",
+      "source": "https://formulae.brew.sh/api/cask/mqttx.json",
+      "caskVersion": "1.13.0",
+      "estimatedCompressedBytes": 128169219
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/mqttx/pipe/2026-09-05T19-52-55.981Z/report.json"
+  },
+  {
+    "slug": "compass",
+    "name": "MongoDB Compass",
+    "bundlePath": "/Applications/MongoDB Compass.app",
+    "cohort": "additional-forty",
+    "category": "Database client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "^43.4.1",
+      "evidence": "Release package declares Electron ^43.4.1; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/mongodb-js/compass/blob/v1.50.0/packages/compass/package.json"
+      ]
+    },
+    "downloadPage": "https://www.mongodb.com/try/download/compass",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 1492,
+      "approximate": false,
+      "source": "https://api.github.com/repos/mongodb-js/compass",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://downloads.mongodb.com/compass/mongodb-compass-1.50.0-darwin-arm64.dmg",
+      "sha256": "0a4ec0b5aa1ff89e27bcc606f24b9ab20cf02a12724b13879d737af1f6daebfe",
+      "type": "dmg",
+      "appName": "MongoDB Compass.app",
+      "source": "https://formulae.brew.sh/api/cask/mongodb-compass.json",
+      "caskVersion": "1.50.0",
+      "estimatedCompressedBytes": 175341311
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/compass/pipe/2026-09-05T23-14-58.633Z/report.json"
+  },
+  {
+    "slug": "insomnia",
+    "name": "Insomnia",
+    "bundlePath": "/Applications/Insomnia.app",
+    "cohort": "additional-forty",
+    "category": "API client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "43.2.0",
+      "evidence": "Release package declares Electron 43.2.0; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/Kong/insomnia/blob/core%4013.2.0/packages/insomnia/package.json"
+      ]
+    },
+    "downloadPage": "https://insomnia.rest/download",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 39990,
+      "approximate": false,
+      "source": "https://api.github.com/repos/Kong/insomnia",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/Kong/insomnia/releases/download/core%4013.2.0/Insomnia.Core-13.2.0.dmg",
+      "sha256": "f0b4535e55af44c212b6e601ae5919d0fa8cdbd82c3b52c10e85a29f4f621806",
+      "type": "dmg",
+      "appName": "Insomnia.app",
+      "source": "https://formulae.brew.sh/api/cask/insomnia.json",
+      "caskVersion": "13.2.0",
+      "estimatedCompressedBytes": 377554822
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/insomnia/pipe/2026-09-05T19-55-30.966Z/report.json"
+  },
+  {
+    "slug": "another-redis",
+    "name": "Another Redis Desktop Manager",
+    "bundlePath": "/Applications/Another Redis Desktop Manager.app",
+    "cohort": "additional-forty",
+    "category": "Database client",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "^12.2.3",
+      "evidence": "Release package declares Electron ^12.2.3; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/qishibo/AnotherRedisDesktopManager/blob/v1.7.4/package.json"
+      ]
+    },
+    "downloadPage": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/latest",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 34726,
+      "approximate": false,
+      "source": "https://api.github.com/repos/qishibo/AnotherRedisDesktopManager",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [
+      "The current release source still declares Electron 12.2.3. Confirm the actual signed binary runtime; do not equate a recent app release with a recent Electron engine."
+    ],
+    "install": {
+      "url": "https://github.com/qishibo/AnotherRedisDesktopManager/releases/download/v1.7.4/Another-Redis-Desktop-Manager-mac-1.7.4-arm64.dmg",
+      "sha256": "65398843725498c2835e2df2e8da2e35e9ce5f83d7632f012eb12a2d8705087a",
+      "type": "dmg",
+      "appName": "Another Redis Desktop Manager.app",
+      "source": "https://formulae.brew.sh/api/cask/another-redis-desktop-manager.json",
+      "caskVersion": "1.7.4",
+      "estimatedCompressedBytes": 87240486
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/another-redis/pipe/2026-09-05T19-57-20.592Z/report.json"
+  },
+  {
+    "slug": "theia",
+    "name": "Eclipse Theia IDE",
+    "bundlePath": "/Applications/TheiaIDE.app",
+    "cohort": "additional-forty",
+    "category": "IDE",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "42.8.1",
+      "evidence": "Release package declares Electron 42.8.1; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/eclipse-theia/theia-ide/blob/master/applications/electron/package.json",
+        "https://theia-ide.org/docs/blueprint_documentation/"
+      ]
+    },
+    "downloadPage": "https://theia-ide.org/#theiaide",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 606,
+      "approximate": false,
+      "source": "https://api.github.com/repos/eclipse-theia/theia-ide",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [
+      "The IDE packaging repository has606 stars; this is a weaker popularity proxy than the larger tools. The product is useful as a distinct Electron IDE architecture, not a top-20 popularity claim."
+    ],
+    "install": {
+      "url": "https://www.eclipse.org/downloads/download.php?file=%2Ftheia%2Fide%2F1.74.100%2Fmacos-arm%2FTheiaIDE.dmg&r=1",
+      "sha256": "50fd68c20bdf01dacf695aea9b9ec9312a84e6b6ce38b3bf83952c6a5b03257f",
+      "type": "dmg",
+      "appName": "TheiaIDE.app",
+      "source": "https://formulae.brew.sh/api/cask/theiaide.json",
+      "caskVersion": "1.74.100",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/theia/pipe/2026-09-05T19-56-07.486Z/report.json"
+  },
+  {
+    "slug": "podman",
+    "name": "Podman Desktop",
+    "bundlePath": "/Applications/Podman Desktop.app",
+    "cohort": "additional-forty",
+    "category": "Container management",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "43.2.0",
+      "evidence": "Release package declares Electron 43.2.0; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/podman-desktop/podman-desktop/blob/v1.29.3/package.json"
+      ]
+    },
+    "downloadPage": "https://podman-desktop.io/downloads",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 7985,
+      "approximate": false,
+      "source": "https://api.github.com/repos/podman-desktop/podman-desktop",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [
+      "Lower priority for this disk-limited test. A small cosmetic trial should not require provisioning a container engine, Kubernetes cluster, or VM. Onboarding feasibility still needs verification."
+    ],
+    "install": {
+      "url": "https://github.com/containers/podman-desktop/releases/download/v1.29.3/podman-desktop-1.29.3-arm64.dmg",
+      "sha256": "9cf9b228da2cf95ee76a7c0435920ea8f71cdca75785a10bc6eb3cd303f68ba2",
+      "type": "dmg",
+      "appName": "Podman Desktop.app",
+      "source": "https://formulae.brew.sh/api/cask/podman-desktop.json",
+      "caskVersion": "1.29.3",
+      "estimatedCompressedBytes": 236188274
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/podman/pipe/2026-09-05T19-58-22.760Z/report.json"
+  },
+  {
+    "slug": "rancher",
+    "name": "Rancher Desktop",
+    "bundlePath": "/Applications/Rancher Desktop.app",
+    "cohort": "additional-forty",
+    "category": "Container management",
+    "alreadyInstalled": false,
+    "electron": {
+      "confirmed": true,
+      "method": "primary project source",
+      "declaredVersion": "43.1.1",
+      "evidence": "Release package declares Electron 43.1.1; this establishes Electron use in the corresponding source, not the exact runtime version of an uninspected signed binary.",
+      "sources": [
+        "https://github.com/rancher-sandbox/rancher-desktop/blob/v1.24.0/package.json"
+      ]
+    },
+    "downloadPage": "https://rancherdesktop.io",
+    "popularity": {
+      "type": "GitHub stars",
+      "value": 7319,
+      "approximate": false,
+      "source": "https://api.github.com/repos/rancher-sandbox/rancher-desktop",
+      "limitations": "Project interest proxy, not active users or macOS market share. Not a popularity ranking."
+    },
+    "caveats": [
+      "Lower priority for this disk-limited test. A small cosmetic trial should not require provisioning a container engine, Kubernetes cluster, or VM. Onboarding feasibility still needs verification."
+    ],
+    "install": {
+      "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.24.0/Rancher.Desktop-1.24.0.aarch64.dmg",
+      "sha256": "0c4eb779d376f51e34b339124ad4f24b771a8f2c69718e839f89958209e78b34",
+      "type": "dmg",
+      "appName": "Rancher Desktop.app",
+      "source": "https://formulae.brew.sh/api/cask/rancher.json",
+      "caskVersion": "1.24.0",
+      "estimatedCompressedBytes": 648410732
+    },
+    "cssStatus": "observed-incomplete",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/rancher/pipe/2026-09-05T20-15-58.751Z/report.json"
+  },
+  {
+    "slug": "claude",
+    "name": "Claude",
+    "bundlePath": "/Applications/Claude.app",
+    "cohort": "additional-forty",
+    "category": "AI assistant",
+    "alreadyInstalled": true,
+    "electron": {
+      "status": "confirmed-installed-vendor-bundle",
+      "claim": "Installed Claude 1.46388.4 includes Electron Framework 42.10.0. Read-only metadata and strict signature/full-bundle integrity match the latest official Developer Mode CSS trial and final cleanup.",
+      "local_evidence": "output/research/claude-installed-metadata-2026-09-06T11-51-37.312Z.json",
+      "sources": [
+        "https://claude.com/download"
+      ]
+    },
+    "downloadPage": "https://claude.com/download",
+    "popularity": {
+      "claim": "Anthropic reported over 300,000 business customers on 2025-09-02. This is company-wide adoption, not desktop installs.",
+      "sources": [
+        "https://www.anthropic.com/news/anthropic-raises-series-f-at-usd183b-post-money-valuation"
+      ]
+    },
+    "caveats": [
+      "Official Developer Mode requires manual opt-in; the documented mode remains enabled as persistent setup. The debugger listener was closed separately after the trials.",
+      "Three CSS proofs across two app processes: two on 1.46388.3 and one on installed 1.46388.4. Each controller borrowed an existing process/profile, removed its stylesheet, and disconnected.",
+      "Fixed main-process JavaScript and fixed read-only renderer appearance checks were verified for cosmetic CSS only. General-purpose extension JavaScript remains unverified."
+    ],
+    "install": {
+      "url": "https://downloads.claude.ai/releases/darwin/universal/1.46388.4/Claude-50e62f90a2c85243eef42913398f7c8f1534abef.zip",
+      "sha256": "494c3c6e791c5c0a5041371f8234a6dffa9c9426165d5ef4c7dbcf85ade58617",
+      "type": "zip",
+      "appName": "Claude.app",
+      "source": "https://formulae.brew.sh/api/cask/claude.json",
+      "caskVersion": "1.46388.4,50e62f90a2c85243eef42913398f7c8f1534abef",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "fixed-cosmetic-js-verified",
+    "cssEvidence": "output/compatibility/claude/developer-mode/2026-09-06T11-51-37.312Z/report.json",
+    "executionScope": {
+      "mainProcessJavaScript": true,
+      "rendererJavaScript": "fixed read-only appearance checks",
+      "arbitraryExtensionsVerified": false,
+      "uiDrivenInjection": false,
+      "existingProfile": true,
+      "ownedLaunch": false
+    }
+  },
+  {
+    "slug": "asana",
+    "name": "Asana",
+    "bundlePath": "/Applications/Asana.app",
+    "cohort": "additional-forty",
+    "category": "Work management",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-vendor-release-notes",
+      "claim": "Official desktop v2.7.1 release notes name Electron 41.1.0; current download page advertises 2.8.1.",
+      "sources": [
+        "https://help.asana.com/s/article/release-notes?language=de"
+      ]
+    },
+    "downloadPage": "https://asana.com/download",
+    "popularity": {
+      "claim": "FY2026 annual report states more than 180,000 paying customers at 2026-01-31; product-wide organizations, not Mac users.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1477720/000114036126015678/ef20070702_ars.pdf"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://desktop-downloads.asana.com/darwin_arm64/prod/v2.8.1/Asana-darwin-arm64-2.8.1.zip",
+      "sha256": "ada5626bcf7e657da850a19f9c07bd616f1c51d464d4bf0e6eaa7886aa1c4afb",
+      "type": "zip",
+      "appName": "Asana.app",
+      "source": "https://formulae.brew.sh/api/cask/asana.json",
+      "caskVersion": "2.8.1",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/asana/pipe/2026-09-05T19-14-30.985Z/report.json"
+  },
+  {
+    "slug": "clickup",
+    "name": "ClickUp",
+    "bundlePath": "/Applications/ClickUp.app",
+    "cohort": "additional-forty",
+    "category": "Work management",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-vendor-documentation",
+      "claim": "Current vendor desktop guide explicitly discusses its Electron implementation.",
+      "sources": [
+        "https://clickup.com/blog/how-to-use-clickup-desktop-app/"
+      ]
+    },
+    "downloadPage": "https://clickup.com/download",
+    "popularity": {
+      "claim": "Vendor reported 20 million users worldwide on 2026-01-29; product-wide, not desktop-only.",
+      "sources": [
+        "https://clickup.com/blog/ai-led-growth-playbook/"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://download.todesktop.com/221003ra4tebclw/ClickUp%203.5.262%20-%20Build%20260717dcrpwg7m0-arm64.dmg",
+      "sha256": "76168f07eeddcab9f0ab967e1c2be6f0a6a0450625ca1369835f6ceb8d4e2a01",
+      "type": "dmg",
+      "appName": "ClickUp.app",
+      "source": "https://formulae.brew.sh/api/cask/clickup.json",
+      "caskVersion": "3.5.262,260717dcrpwg7m0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/clickup/pipe/2026-09-05T19-16-47.516Z/report.json"
+  },
+  {
+    "slug": "linear",
+    "name": "Linear",
+    "bundlePath": "/Applications/Linear.app",
+    "cohort": "additional-forty",
+    "category": "Project collaboration",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-vendor-engineering",
+      "claim": "Official 2024 UI engineering article says the app runs on Electron; current download remains active. Exact current binary framework should be recorded at installation.",
+      "sources": [
+        "https://linear.app/now/how-we-redesigned-the-linear-ui",
+        "https://linear.app/download"
+      ]
+    },
+    "downloadPage": "https://linear.app/download",
+    "popularity": {
+      "claim": "Vendor reported more than 40,000 paying companies on 2026-08-26; product-wide, not Mac installs.",
+      "sources": [
+        "https://linear.app/now/sharing-growth-with-the-people-building-linear"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://releases.linear.app/Linear-1.32.4-universal.dmg",
+      "sha256": "bae1078fabf5b72d884c3bbba4235117e92070adcba407cdc30afb3933f14d31",
+      "type": "dmg",
+      "appName": "Linear.app",
+      "source": "https://formulae.brew.sh/api/cask/linear.json",
+      "caskVersion": "1.32.4",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/linear/pipe/2026-09-05T19-16-39.807Z/report.json"
+  },
+  {
+    "slug": "miro",
+    "name": "Miro",
+    "bundlePath": "/Applications/Miro.app",
+    "cohort": "additional-forty",
+    "category": "Visual collaboration",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "probable-needs-installed-framework-verification",
+      "claim": "Current vendor desktop troubleshooting names com.electron.realtimeboard.ShipIt; this is strong packaging evidence but not a current runtime version. Confirm shipped Electron Framework before counting as Electron.",
+      "sources": [
+        "https://help.miro.com/hc/en-us/articles/360017572854-Desktop-app"
+      ]
+    },
+    "downloadPage": "https://miro.com/apps/",
+    "popularity": {
+      "claim": "Current vendor About page states more than 100 million users in 250,000 organizations; product-wide, not Mac users.",
+      "sources": [
+        "https://miro.com/about/"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://desktop.miro.com/platforms/darwin-arm64/Install-Miro.dmg",
+      "sha256": null,
+      "type": "dmg",
+      "appName": "Miro.app",
+      "source": "https://formulae.brew.sh/api/cask/miro.json",
+      "caskVersion": "0.11.168",
+      "estimatedCompressedBytes": 119637682
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/miro/pipe/2026-09-05T19-24-03.212Z/report.json"
+  },
+  {
+    "slug": "evernote",
+    "name": "Evernote",
+    "bundlePath": "/Applications/Evernote.app",
+    "cohort": "additional-forty",
+    "category": "Notes and productivity",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "candidate-needs-installed-framework-verification",
+      "claim": "Current official desktop release and download are active. Current Electron implementation not independently established from a recent primary architecture source; inspect shipped vendor framework before counting.",
+      "sources": [
+        "https://evernote.com/en-us/release-notes"
+      ]
+    },
+    "downloadPage": "https://evernote.com/download",
+    "popularity": {
+      "claim": "Vendor reported over 250 million customers and millions of paying customers in its 2022-11-16 acquisition announcement. Historical cross-platform adoption, not current active users or desktop installs.",
+      "sources": [
+        "https://evernote.com/blog/bending-spoons-to-acquire-evernote"
+      ]
+    },
+    "caveats": [
+      "Use current vendor download link, not stale 2024 Homebrew cask version."
+    ],
+    "install": {
+      "url": "https://mac.desktop.evernote.com/builds/Evernote-latest.dmg",
+      "sha256": null,
+      "type": "dmg",
+      "appName": "Evernote.app",
+      "source": "https://evernote.com/download",
+      "caskVersion": "vendor latest",
+      "estimatedCompressedBytes": 325253446
+    },
+    "cssStatus": "not-reached",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/evernote/launchservices-followup.json"
+  },
+  {
+    "slug": "notion-calendar",
+    "name": "Notion Calendar",
+    "bundlePath": "/Applications/Notion Calendar.app",
+    "cohort": "additional-forty",
+    "category": "Calendar",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "candidate-needs-installed-framework-verification",
+      "claim": "Current official standalone Mac app is available. Current Electron framework not established by a primary public architecture source; inspect shipped framework before counting.",
+      "sources": [
+        "https://www.notion.com/help/notion-calendar-apps"
+      ]
+    },
+    "downloadPage": "https://www.notion.com/product/calendar",
+    "popularity": {
+      "claim": "Standalone calendar from mainstream Notion; no Calendar-specific user count found. Do not substitute total Notion adoption as Calendar users.",
+      "sources": [
+        "https://www.notion.com/product/calendar"
+      ]
+    },
+    "caveats": [
+      "HEAD to cask-discovered vendor arm64 ZIP returned 403; installer availability via normal vendor download control still needs verification. Do not interpret HEAD rejection as no macOS app."
+    ],
+    "install": {
+      "url": "https://calendar-desktop-release.notion-static.com/Notion%20Calendar-darwin-arm64-1.139.0.zip",
+      "sha256": "f1fb3dc449a1b37ccacf5c450c41fe12c0fd9b8c3f33cad1353eed1289022724",
+      "type": "zip",
+      "appName": "Notion Calendar.app",
+      "source": "https://formulae.brew.sh/api/cask/notion-calendar.json",
+      "caskVersion": "1.139.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/notion-calendar/pipe/2026-09-05T19-35-17.483Z/report.json"
+  },
+  {
+    "slug": "joplin",
+    "name": "Joplin",
+    "bundlePath": "/Applications/Joplin.app",
+    "cohort": "additional-forty",
+    "category": "Notes",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 42.3.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/laurent22/joplin/blob/dev/packages/app-desktop/package.json"
+      ]
+    },
+    "downloadPage": "https://joplinapp.org/help/install/",
+    "popularity": {
+      "claim": "56,249 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/laurent22/joplin"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/laurent22/joplin/releases/download/v3.6.16/Joplin-3.6.16-arm64.DMG",
+      "sha256": "0aa77a277bc2040aae73ce1f77c6eca5e52d6d21f8e83cfbc206916b600bfb4e",
+      "type": "dmg",
+      "appName": "Joplin.app",
+      "source": "https://formulae.brew.sh/api/cask/joplin.json",
+      "caskVersion": "3.6.16",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "not-reached",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/joplin/tcp/2026-09-05T20-11-31.000Z/report.json"
+  },
+  {
+    "slug": "logseq",
+    "name": "Logseq",
+    "bundlePath": "/Applications/Logseq.app",
+    "cohort": "additional-forty",
+    "category": "Knowledge management",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 42.3.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/logseq/logseq/blob/master/resources/package.json"
+      ]
+    },
+    "downloadPage": "https://logseq.com/downloads",
+    "popularity": {
+      "claim": "44,785 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/logseq/logseq"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/logseq/logseq/releases/download/2.0.1/Logseq-darwin-arm64-2.0.1.dmg",
+      "sha256": "b76af25384f8aaa0ba322f8b5523aea712d9750d9f3e79cac55dc783796439cd",
+      "type": "dmg",
+      "appName": "Logseq.app",
+      "source": "https://formulae.brew.sh/api/cask/logseq.json",
+      "caskVersion": "2.0.1",
+      "estimatedCompressedBytes": 168847627
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/logseq/pipe/2026-09-05T19-37-11.598Z/report.json"
+  },
+  {
+    "slug": "anytype",
+    "name": "Anytype",
+    "bundlePath": "/Applications/Anytype.app",
+    "cohort": "additional-forty",
+    "category": "Knowledge management",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron ^41.10.6. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/anyproto/anytype-ts/blob/develop/package.json"
+      ]
+    },
+    "downloadPage": "https://download.anytype.io/?platform=desktop",
+    "popularity": {
+      "claim": "8,754 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/anyproto/anytype-ts"
+      ]
+    },
+    "caveats": [
+      "Official download is labelled beta; select published production channel, not source development build."
+    ],
+    "install": {
+      "url": "https://anytype-release.fra1.cdn.digitaloceanspaces.com/Anytype-0.56.5-mac-arm64.dmg",
+      "sha256": "b8283663de017a2545d94709662f56fa0cdd7759cd0c1ff4e73dc9092e39508a",
+      "type": "dmg",
+      "appName": "Anytype.app",
+      "source": "https://formulae.brew.sh/api/cask/anytype.json",
+      "caskVersion": "0.56.5",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/anytype/pipe/2026-09-05T19-41-05.254Z/report.json"
+  },
+  {
+    "slug": "affine",
+    "name": "AFFiNE",
+    "bundlePath": "/Applications/AFFiNE.app",
+    "cohort": "additional-forty",
+    "category": "Notes and whiteboard",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron ^39.0.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/toeverything/AFFiNE/blob/canary/packages/frontend/apps/electron/package.json"
+      ]
+    },
+    "downloadPage": "https://affine.pro/download",
+    "popularity": {
+      "claim": "72,213 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/toeverything/AFFiNE"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/toeverything/AFFiNE/releases/download/v0.27.4/affine-0.27.4-stable-macos-arm64.zip",
+      "sha256": "1139f5788f40e3f0552416d8f57615d1c2750c5f184a2a1b754dde9a4d0077f6",
+      "type": "zip",
+      "appName": "AFFiNE.app",
+      "source": "https://formulae.brew.sh/api/cask/affine.json",
+      "caskVersion": "0.27.4",
+      "estimatedCompressedBytes": 158774537
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/affine/pipe/2026-09-05T20-13-43.969Z/report.json"
+  },
+  {
+    "slug": "standard-notes",
+    "name": "Standard Notes",
+    "bundlePath": "/Applications/Standard Notes.app",
+    "cohort": "additional-forty",
+    "category": "Notes",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 35.2.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/standardnotes/app/blob/main/packages/desktop/package.json"
+      ]
+    },
+    "downloadPage": "https://standardnotes.com/download",
+    "popularity": {
+      "claim": "6,621 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/standardnotes/app"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/standardnotes/app/releases/download/%40standardnotes%2Fdesktop%403.202.0/standard-notes-3.202.0-mac-arm64.zip",
+      "sha256": "13c6e69c20954dfde5b7063b824dee4cb6eaf521450378f3e615405e284a26b7",
+      "type": "zip",
+      "appName": "Standard Notes.app",
+      "source": "https://formulae.brew.sh/api/cask/standard-notes.json",
+      "caskVersion": "3.202.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/standard-notes/pipe/2026-09-05T19-45-44.595Z/report.json"
+  },
+  {
+    "slug": "siyuan",
+    "name": "SiYuan",
+    "bundlePath": "/Applications/SiYuan.app",
+    "cohort": "additional-forty",
+    "category": "Knowledge management",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 42.9.2. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/siyuan-note/siyuan/blob/master/app/package.json"
+      ]
+    },
+    "downloadPage": "https://b3log.org/siyuan/en/download.html",
+    "popularity": {
+      "claim": "46,183 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/siyuan-note/siyuan"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/siyuan-note/siyuan/releases/download/v3.8.2/siyuan-3.8.2-mac-arm64.dmg",
+      "sha256": "5690b2ab43fb7c98139bc1dd474a711b8bcbeb52fba50106a956f81326ba3f2c",
+      "type": "dmg",
+      "appName": "SiYuan.app",
+      "source": "https://formulae.brew.sh/api/cask/siyuan.json",
+      "caskVersion": "3.8.2",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/siyuan/pipe/2026-09-05T19-37-01.838Z/report.json"
+  },
+  {
+    "slug": "element",
+    "name": "Element",
+    "bundlePath": "/Applications/Element.app",
+    "cohort": "additional-forty",
+    "category": "Messaging",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 44.0.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/element-hq/element-web/blob/develop/apps/desktop/package.json"
+      ]
+    },
+    "downloadPage": "https://element.io/en/download",
+    "popularity": {
+      "claim": "Approximately 13.1k stars shown for the current Element Web/Desktop monorepo; includes web project interest, not desktop users.",
+      "sources": [
+        "https://github.com/element-hq/element-web"
+      ]
+    },
+    "caveats": [
+      "Old element-desktop repo was archived after migration into element-web monorepo; current desktop package is active there."
+    ],
+    "install": {
+      "url": "https://packages.element.io/desktop/update/macos/Element-1.12.27-universal-mac.zip",
+      "sha256": "a9a577bcfbc2a2307525579fb9ca722ed70e9fd7d45e843dc9a297bba2bc1570",
+      "type": "zip",
+      "appName": "Element.app",
+      "source": "https://formulae.brew.sh/api/cask/element.json",
+      "caskVersion": "1.12.27",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/element/pipe/2026-09-05T19-38-35.087Z/report.json"
+  },
+  {
+    "slug": "mattermost",
+    "name": "Mattermost",
+    "bundlePath": "/Applications/Mattermost.app",
+    "cohort": "additional-forty",
+    "category": "Team messaging",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 43.3.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/mattermost/desktop/blob/master/package.json"
+      ]
+    },
+    "downloadPage": "https://mattermost.com/apps/",
+    "popularity": {
+      "claim": "2,269 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/mattermost/desktop"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://releases.mattermost.com/desktop/6.3.0/mattermost-desktop-6.3.0-mac-arm64.zip",
+      "sha256": "b6d22403e8a96cf54ba3a9ecf7267a5c7bb7ce225249ce12d53a60c8b4db5bfd",
+      "type": "zip",
+      "appName": "Mattermost.app",
+      "source": "https://formulae.brew.sh/api/cask/mattermost.json",
+      "caskVersion": "6.3.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "observed-incomplete",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/mattermost/tcp/2026-09-05T19-55-11.708Z/report.json"
+  },
+  {
+    "slug": "rocket-chat",
+    "name": "Rocket.Chat",
+    "bundlePath": "/Applications/Rocket.Chat.app",
+    "cohort": "additional-forty",
+    "category": "Team messaging",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 42.5.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/RocketChat/Rocket.Chat.Electron/blob/dev/package.json"
+      ]
+    },
+    "downloadPage": "https://www.rocket.chat/download-apps",
+    "popularity": {
+      "claim": "Vendor download page claims 12M+ users across 150 countries; product-wide, not macOS usage.",
+      "sources": [
+        "https://www.rocket.chat/download-apps"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/RocketChat/Rocket.Chat.Electron/releases/download/4.17.0/rocketchat-4.17.0-mac.dmg",
+      "sha256": "8856fc17dc5eff1f5912b3931295087b204ed09c8b019a51f9ae96b56e18a528",
+      "type": "dmg",
+      "appName": "Rocket.Chat.app",
+      "source": "https://formulae.brew.sh/api/cask/rocket-chat.json",
+      "caskVersion": "4.17.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/rocket-chat/pipe/2026-09-05T19-42-13.913Z/report.json"
+  },
+  {
+    "slug": "mailspring",
+    "name": "Mailspring",
+    "bundlePath": "/Applications/Mailspring.app",
+    "cohort": "additional-forty",
+    "category": "Email",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron 43.4.1. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/Foundry376/Mailspring/blob/master/package.json"
+      ]
+    },
+    "downloadPage": "https://www.getmailspring.com/download",
+    "popularity": {
+      "claim": "17,775 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/Foundry376/Mailspring"
+      ]
+    },
+    "caveats": [],
+    "install": {
+      "url": "https://github.com/Foundry376/Mailspring/releases/download/1.23.0/Mailspring-AppleSilicon.zip",
+      "sha256": "a9f641d9dfc9a5f0a3ecb87b3492ab416c0a8cbdfcd3ec424d7ae99e180886ea",
+      "type": "zip",
+      "appName": "Mailspring.app",
+      "source": "https://formulae.brew.sh/api/cask/mailspring.json",
+      "caskVersion": "1.23.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/mailspring/pipe/2026-09-05T19-44-00.528Z/report.json"
+  },
+  {
+    "slug": "franz",
+    "name": "Franz",
+    "bundlePath": "/Applications/Franz.app",
+    "cohort": "additional-forty",
+    "category": "Messaging workspace",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-vendor-changelog",
+      "claim": "Official 6.6.0 release dated 2026-08-07 says Franz moved to a newer Electron release; current changelog latest is 6.7.1.",
+      "sources": [
+        "https://meetfranz.com/changelog"
+      ]
+    },
+    "downloadPage": "https://meetfranz.com/",
+    "popularity": {
+      "claim": "Current official site reports more than 1 million downloads since 2016; cumulative downloads, not active users.",
+      "sources": [
+        "https://meetfranz.com/"
+      ]
+    },
+    "caveats": [
+      "Current vendor Franz 6 differs from old open-source GitHub latest 5.11.0; use current vendor download."
+    ],
+    "install": {
+      "url": "https://github.com/meetfranz/franz-6/releases/download/v6.7.1/Franz-arm64.dmg",
+      "sha256": "e822911913caf56fa7066c26722d2f366ec075b2635a0c513117beb6f5681e38",
+      "type": "dmg",
+      "appName": "Franz.app",
+      "source": "https://formulae.brew.sh/api/cask/franz.json",
+      "caskVersion": "6.7.1",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/franz/pipe/2026-09-05T19-45-45.301Z/report.json"
+  },
+  {
+    "slug": "freetube",
+    "name": "FreeTube",
+    "bundlePath": "/Applications/FreeTube.app",
+    "cohort": "additional-forty",
+    "category": "Video viewing",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron ^43.4.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/FreeTubeApp/FreeTube/blob/development/package.json"
+      ]
+    },
+    "downloadPage": "https://freetubeapp.io/",
+    "popularity": {
+      "claim": "21,855 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/FreeTubeApp/FreeTube"
+      ]
+    },
+    "caveats": [
+      "Homebrew cask disabled: fails_gatekeeper_check; current vendor artifact must pass integrity and normal launch checks."
+    ],
+    "install": {
+      "url": "https://github.com/FreeTubeApp/FreeTube/releases/download/v0.25.3-beta/freetube-0.25.3-beta-mac-arm64.dmg",
+      "sha256": "2b445d64f5e56a873debea50c785cd41400bdabc387f0d67fc7be745b2b9146e",
+      "type": "dmg",
+      "appName": "FreeTube.app",
+      "source": "https://formulae.brew.sh/api/cask/freetube.json",
+      "caskVersion": "0.25.3",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/freetube/pipe/2026-09-05T19-52-33.858Z/report.json"
+  },
+  {
+    "slug": "losslesscut",
+    "name": "LosslessCut",
+    "bundlePath": "/Applications/LosslessCut.app",
+    "cohort": "additional-forty",
+    "category": "Video editing",
+    "alreadyInstalled": false,
+    "electron": {
+      "status": "confirmed-current-project-source",
+      "claim": "Current maintained desktop package declares Electron ^42.3.0. This is source-branch evidence, not the exact released binary version.",
+      "sources": [
+        "https://github.com/mifi/lossless-cut/blob/master/package.json"
+      ]
+    },
+    "downloadPage": "https://losslesscut.app/",
+    "popularity": {
+      "claim": "43,468 GitHub stars observed 2026-09-05; project interest, not active users or a popularity ranking.",
+      "sources": [
+        "https://github.com/mifi/lossless-cut"
+      ]
+    },
+    "caveats": [
+      "Verify normal vendor signing/Gatekeeper acceptance before trial; website discusses experimental direct downloads. Do not alter signing or permissions."
+    ],
+    "install": {
+      "url": "https://github.com/mifi/lossless-cut/releases/download/v3.69.0/LosslessCut-mac-arm64.dmg",
+      "sha256": "c7801b482df3be0384acc8171d5a7d16cce70d1588871e344b155aaca39fa58b",
+      "type": "dmg",
+      "appName": "LosslessCut.app",
+      "source": "https://formulae.brew.sh/api/cask/losslesscut.json",
+      "caskVersion": "3.69.0",
+      "estimatedCompressedBytes": null
+    },
+    "cssStatus": "verified",
+    "jsStatus": "not-verified",
+    "cssEvidence": "output/compatibility/losslesscut/pipe/2026-09-05T19-35-35.027Z/report.json"
+  }
+]

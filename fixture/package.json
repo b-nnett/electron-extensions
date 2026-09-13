@@ -1,0 +1,8 @@
+{
+  "name": "style-lab",
+  "productName": "Style Lab",
+  "version": "0.1.0",
+  "main": "main.cjs",
+  "description": "An ordinary Electron app with no customization bridge.",
+  "author": "Extensions Anywhere"
+}

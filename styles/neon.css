@@ -1,0 +1,9 @@
+/* Applied from the separate controller, outside the signed app. */
+#signal-button {
+  background-color: #d5ff70 !important;
+  color: #17220a !important;
+  border-radius: 24px !important;
+  box-shadow: 0 0 0 3px #17220a, 0 8px 0 #17220a !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}

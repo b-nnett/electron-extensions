@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'">
+  <title>Style Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="renderer.js" defer></script>
+</head>
+<body>
+  <header><span class="mark">S</span><strong>Style Lab</strong><span class="pill">TEST WORKSPACE</span></header>
+  <main>
+    <p class="eyebrow">A LITTLE ROOM TO EXPERIMENT</p>
+    <h1>Make yourself<br>at home.</h1>
+    <p class="intro">An ordinary app. One button. A blank canvas for something a little more personal.</p>
+    <section class="card">
+      <div class="card-top"><span class="orb">↗</span><span class="tag">INTERACTIVE DEMO</span></div>
+      <h2>Send a little signal.</h2>
+      <p>The button should keep working, whatever it’s wearing.</p>
+      <button id="signal-button" type="button">Send a ping <span aria-hidden="true">↗</span></button>
+      <p id="receipt" role="status">No pings yet. Give it a try.</p>
+    </section>
+    <footer><span class="dot"></span>All quiet in the workspace.<span>01 / STYLE LAB</span></footer>
+  </main>
+</body>
+</html>
